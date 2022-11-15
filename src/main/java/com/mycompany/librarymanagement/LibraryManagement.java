@@ -5,44 +5,51 @@
 
 package com.mycompany.librarymanagement;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.mycompany.librarymanagement.entities.Book;
+import com.mycompany.librarymanagement.fileloaders.BooksFileLoader;
 
 /**
  *
  * @author Admin
  */
 public class LibraryManagement {
+	
+	private static List<Book> books = new ArrayList<>();
 
 	public static void main(String[] args) {
-
-		final String file = "C:\\Users\\Admin\\Downloads\\MOCK_DATA (1).csv";
-		BufferedReader reader = null;
-		String line = "";
-		// above we create var
-		try {
-			reader = new BufferedReader(new FileReader(file));
-			while ((line = reader.readLine()) != null) {
-
-				String[] row = line.split(",");
-				for (String index : row) {
-					System.out.printf(index);
-				}
-				System.out.println();
-			}
+		
+		loadFiles();
+		for(int i = 0; i < books.size(); i++)
+		{
+			System.out.println(books.get(i).getId());
 		}
-		// try process is to ready the first line and the While process is to repeate
-		// the reading line until finish the lines
-		catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				reader.close();
-			} catch (IOException e) {
-				// Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
+		showMenu();
+
+	}
+	
+	private static void loadFiles() {
+		loadBooksFile();
+		loadStudentsFile();
+		loadBorrowingsFile();
+	}
+	
+	private static void showMenu() {
+		// Fazer depois
+	}
+	
+	private static void loadBooksFile() {
+		BooksFileLoader loader = new BooksFileLoader(); 
+		books = loader.loadBooksFile("C:\\temp\\Andrei\\LibraryManagement\\src\\main\\resources\\MOCK_DATA.csv");
+	}
+	
+	private static void loadStudentsFile() {
+		// Ainda vai ser feito
+	}
+	
+	private static void loadBorrowingsFile() {
+		// Ainda vai ser feito
 	}
 }
