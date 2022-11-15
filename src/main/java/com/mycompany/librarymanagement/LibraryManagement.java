@@ -17,7 +17,7 @@ public class LibraryManagement {
 
 	public static void main(String[] args) {
 
-		String file = "C:\\Users\\Admin\\Downloads\\MOCK_DATA (1).csv";
+		final String file = "C:\\Users\\Admin\\Downloads\\MOCK_DATA (1).csv";
 		BufferedReader reader = null;
 		String line = "";
 		// above we create var
