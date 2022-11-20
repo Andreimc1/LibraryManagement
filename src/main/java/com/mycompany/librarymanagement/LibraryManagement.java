@@ -5,6 +5,7 @@
 
 package com.mycompany.librarymanagement;
 
+import com.mycompany.librarymanagement.classes.Menu;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,12 +38,13 @@ public class LibraryManagement {
 	}
 	
 	private static void showMenu() {
-		// Fazer depois
+            Menu menu = new Menu();
+            menu.show();
 	}
 	
 	private static void loadBooksFile() {
 		BooksFileLoader loader = new BooksFileLoader(); 
-		books = loader.loadBooksFile("C:\\temp\\Andrei\\LibraryManagement\\src\\main\\resources\\MOCK_DATA.csv");
+		books = loader.loadBooksFile("\\resources\\MOCK_DATA.csv");
 	}
 	
 	private static void loadStudentsFile() {

@@ -15,7 +15,7 @@ public class BooksFileLoader {
 	public List<Book> loadBooksFile(String file){
 		BufferedReader reader = null;
 		String line = "";
-		// above we create var
+		
 		try {
 			reader = new BufferedReader(new FileReader(file));
 			while ((line = reader.readLine()) != null) {
@@ -43,10 +43,10 @@ public class BooksFileLoader {
 		Book book = new Book();
 		book.setId(row[0]);
 		// TODO Substituir por getters e setters e colocar todos os dados do arquivo nos objectos
-		book.authorFirstName = row[1];
-		book.authorLastName = row[2];
-		// bookTitle;
-		// genre;
+		book.setAuthorFirstName (row[1]);
+		book.setAuthorLastName (row[2]);
+		book.setBookTitle(row[3]);
+		book.setGenre(row[4]);
 
 		books.add(book);
 	}

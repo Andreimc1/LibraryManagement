@@ -7,10 +7,10 @@ public class Book {
 	
 	private String id;
 	// TODO colocar propriedades como private
-	public String authorFirstName;
-	public String authorLastName;
-	public String bookTitle;
-	public String genre;
+	private String authorFirstName;
+	private String authorLastName;
+	private String bookTitle;
+	private String genre;
 	
 	public String getId() {
 		return id;
@@ -19,4 +19,28 @@ public class Book {
 		this.id = id;
 	}
 	// TODO Criar getters e setter para todas as propriedades
+        public String getAuthorFirstName(){
+            return authorFirstName;
+        }
+        public void setAuthorFirstName(String authorFirstName){
+            this.authorFirstName = authorFirstName;
+        }
+        public String getAuthorLastName(){
+            return authorLastName;
+        }
+        public void setAuthorLastName(String authorLastName){
+            this.authorLastName = authorLastName;
+        }
+        public String getBookTitle(){
+            return bookTitle;
+        }
+        public void setBookTitle(String bookTitle){
+            this.bookTitle = bookTitle;
+        }
+        public String getGenre(){
+            return genre;
+        }
+        public void setGenre(String genre){
+            this.genre = genre;
+        }
 }
