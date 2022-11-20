@@ -19,8 +19,9 @@ public class BookFinder {
         System.out.println("What is the title of the book:");
         String title = scanner.nextLine();
         
-        for (Book books : books) {
-        if (Book.getTitle().equals(title)) {
+        
+        for (int i = 0; i < Book.getTitle(); i++) {        
+            if (Book.getTitle().equals(title)) {
             return Book.bookTitle;
         }
     }
