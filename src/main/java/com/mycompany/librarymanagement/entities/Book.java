@@ -4,6 +4,10 @@
 package com.mycompany.librarymanagement.entities;
 
 public class Book {
+
+    public static Object getTitle() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 	
 	private String id;
 	// TODO colocar propriedades como private

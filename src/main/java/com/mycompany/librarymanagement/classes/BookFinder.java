@@ -4,6 +4,7 @@
  */
 package com.mycompany.librarymanagement.classes;
 
+import com.mycompany.librarymanagement.entities.Book;
 import java.util.Scanner;
 
 /**
@@ -11,12 +12,18 @@ import java.util.Scanner;
  * @author Andrei
  */
 public class BookFinder {
-    public void findBook(){
+
+    private Iterable<Book> books;
+    public Object findBook(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("What is the title of the book:");
         String title = scanner.nextLine();
         
-        
+        for (Book books : books) {
+        if (Book.getTitle().equals(title)) {
+            return Book.bookTitle;
+        }
     }
+   
     
-}
+
