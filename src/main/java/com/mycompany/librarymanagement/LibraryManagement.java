@@ -44,7 +44,7 @@ public class LibraryManagement {
 	
 	private static void loadBooksFile() {
 		BooksFileLoader loader = new BooksFileLoader(); 
-		books = loader.loadBooksFile("\\resources\\MOCK_DATA.csv");
+		books = loader.loadBooksFile("src/main/resources/MOCK_DATA.csv");
 	}
 	
 	private static void loadStudentsFile() {

@@ -18,11 +18,15 @@ public class BookFinder {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What is the title of the book:");
         String title = scanner.nextLine();
+        return null;
+        }
+  
+    public static void getTitle(){    
+        for (int i = 0; i < LibraryManagement.getBooks().size; i++) {        
+            if (LibraryManagement.getBooksTitle().equals(title)) {
+            return LibraryManagement.getBooksTitle();
         
-        
-        for (int i = 0; i < Book.getTitle(); i++) {        
-            if (Book.getTitle().equals(title)) {
-            return Book.bookTitle;
+            
         }
     }
    
